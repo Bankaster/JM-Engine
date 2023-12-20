@@ -51,9 +51,7 @@ bool ModuleEditor::Init()
 	}
 
 	// Setup Dear ImGui style
-	ImGui::StyleColorsDark();
-
-	//ImGui::StyleColorsLight();
+	ImGui::StyleColorsClassic();
 
 	// When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
 	ImGuiStyle& style = ImGui::GetStyle();
@@ -628,9 +626,9 @@ void ModuleEditor::MousePicking(ImVec2 mousePosition, ImVec2 sceneWindowPos, ImV
 
 void ModuleEditor::DrawPausePlay()
 {
-	if (ImGui::Begin(" ", NULL, ImGuiWindowFlags_NoNav | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoTitleBar))
+	if (ImGui::Begin(" ", NULL, ImGuiWindowFlags_NoNav | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoTitleBar | ImGuiDockNodeFlags_AutoHideTabBar))
 	{
-		ImGui::SameLine(200.0f);
+		ImGui::SameLine(500.0f);
 
 		std::string playStop = App->scene->gameTime.IsRunning() ? "Pause" : "Play";
 		if (ImGui::Button(playStop.c_str()))
@@ -653,7 +651,7 @@ void ModuleEditor::DrawPausePlay()
 
 		ImGui::SameLine();
 
-		ImGui::TextColored(GREEN, "Game time: %.2f", (App->scene->gameTime.Read() / 1000.0f));
+		ImGui::TextColored(PURPLE, "Game time: %.2f", (App->scene->gameTime.Read() / 1000.0f));
 	}
 	ImGui::End();
 }

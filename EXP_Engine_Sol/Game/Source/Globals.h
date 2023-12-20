@@ -28,7 +28,7 @@ enum update_status
 };
 
 // Configuration -----------
-#define SCREEN_WIDTH 1280
+#define SCREEN_WIDTH 1720
 #define SCREEN_HEIGHT 1024
 #define SCREEN_SIZE 1
 #define WIN_FULLSCREEN false
@@ -36,14 +36,16 @@ enum update_status
 #define WIN_BORDERLESS false
 #define WIN_FULLSCREEN_DESKTOP false
 #define VSYNC true
-#define TITLE "DaTo Engine"
+#define TITLE "JM Engine"
 
 // Colors ------------
 #define GREEN ImVec4(0.1f, 1.0f, 0.0f, 1.0f)
 #define YELLOW ImVec4(1.0f, 1.0f, 0.0f, 1.0f)
+#define PURPLE ImVec4(0.5f, 0.5f, 1.0f, 1.0f)
 #define BLUE ImVec4(0.0f, 0.0f, 1.0f, 1.0f)
 #define RED ImVec4(1.0f, 0.0f, 0.0f, 1.0f)
 #define WHITE ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
+
 
 class Application;
 

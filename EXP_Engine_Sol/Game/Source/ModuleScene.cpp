@@ -31,7 +31,7 @@ bool ModuleScene::Init()
 	gameCameraObject->AddComponent(gameCamera);
 
 	//Set the game camera starter position
-	gameCameraObject->transform->SetPosition(float3(0.0f, 5.0f, -20.0f));
+	gameCameraObject->transform->SetPosition(float3(0.0f, 3.0f, -20.0f));
 	gameCameraObject->transform->SetRotation(Quat::FromEulerXYZ(0.0f, 0.0, 0.0f));
 
 	totalCameras.push_back(gameCamera);
