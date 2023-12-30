@@ -777,6 +777,9 @@
     <ClInclude Include="Game\Source\Json.h">
       <Filter>Source\CustomFileFormat</Filter>
     </ClInclude>
+    <ClInclude Include="Game\Source\Scripting.h">
+      <Filter>Source\Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\External\DevIL\include\luadevil.c">
@@ -979,6 +982,9 @@
     </ClCompile>
     <ClCompile Include="Game\Source\Json.cpp">
       <Filter>Source\CustomFileFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Source\Scripting.cpp">
+      <Filter>Source\Modules</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
