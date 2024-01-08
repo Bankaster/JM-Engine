@@ -1,22 +1,20 @@
 #pragma once
-#include "Component.h"
+#include "Module.h"
 
-#include "Application.h"
-#include "ModuleRenderer3D.h"
-#include "ModuleInput.h"
+class Scripting : public Module
+{
+private:
+	bool enabled;
 
-#include "Globals.h"
-#include <string>
-
-#include "../External/MathGeoLib/include/MathGeoLib.h"
-#include "../External/MathGeoLib/include/Math/float4x4.h"
-#include "../External/MathGeoLib/include/Geometry/Frustum.h"
-#include "../External/MathGeoLib/include/Math/float3.h"
-#include "../External/MathGeoLib/include/Geometry/LineSegment.h"
-
-class Scripting {
 public:
 
-private:
+	Scripting(Application* parent, bool start_enabled = true);
+	~Scripting();
+
+	bool Init();
+	bool Start();
+	update_status Update(float dt);
+	bool CleanUp();
+
 
 };

@@ -4,6 +4,8 @@
 #include "ModuleImport.h"
 #include "ModuleWindow.h"
 
+
+
 #include <map>
 
 ModuleScene::ModuleScene(Application* app, bool start_enabled) : Module(app, start_enabled)
@@ -29,6 +31,7 @@ bool ModuleScene::Init()
 
 	gameCamera = new ComponentCamera(gameCameraObject);
 	gameCameraObject->AddComponent(gameCamera);
+
 
 	//Set the game camera starter position
 	gameCameraObject->transform->SetPosition(float3(0.0f, 3.0f, -20.0f));

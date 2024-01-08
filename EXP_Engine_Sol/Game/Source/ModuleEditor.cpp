@@ -612,6 +612,10 @@ void ModuleEditor::DrawSceneAlert()
 // Function to Mouse Picking MYTODO: GET THIS OUT OF HERE
 void ModuleEditor::MousePicking(ImVec2 mousePosition, ImVec2 sceneWindowPos, ImVec2 sceneWindowSize, float sceneFrameHeightOffset)
 {
+	if (App->scene->gameTime.IsRunning()) {
+		return; //to skip to the rest of the code
+	}
+
 	ImVec2 normalizedPoint = NormalizePoint(sceneWindowPos.x, sceneWindowPos.y + (sceneFrameHeightOffset * 2), sceneWindowSize.x, sceneWindowSize.y - (sceneFrameHeightOffset * 2), mousePosition);
 
 	normalizedPoint.x = (normalizedPoint.x - 0.5f) / 0.5f;
