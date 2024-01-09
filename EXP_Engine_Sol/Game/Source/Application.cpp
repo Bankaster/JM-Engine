@@ -7,7 +7,7 @@
 #include "ModuleEditor.h"
 #include "ModuleImport.h"
 #include "ModuleScene.h"
-#include "Scripting.h"
+//#include "Scripting.h"
 
 extern Application* ExternalApp = nullptr;
 Application::Application()
@@ -21,7 +21,7 @@ Application::Application()
 	editor = new ModuleEditor(this);
 	importer = new ModuleImport(this);
 	scene = new ModuleScene(this);
-	scripting = new Scripting(this);
+	//scripting = new Scripting(this);
 
 	// The order of calls is very important!
 	// Modules will Init() Start() and Update in this order
@@ -34,7 +34,7 @@ Application::Application()
 	AddModule(input);
 
 	AddModule(scene);
-	AddModule(scripting);
+	//AddModule(scripting);
 	// Renderer last!
 	AddModule(renderer3D);
 	AddModule(editor);

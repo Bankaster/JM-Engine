@@ -83,6 +83,7 @@ public:
 
 	//Function that check if the name exists in game objects, if exists, call ReName.
 	std::string GetUniqueName(std::string Name);
+	Texture* LoadTexture(const char* file_path);
 
 private:
 	
@@ -95,7 +96,7 @@ private:
 	typeFile ReadExtension(std::string file_path);
 
 	void LoadMesh(const char* file_path);
-	Texture* LoadTexture(const char* file_path);
+	
 
 	mesh ProcessMesh(aiMesh* Mesh, const char* file_path, GameObject* gameObject);
 	void GetSceneInfo(aiNode* node, const aiScene* scene, const char* file_path, GameObject* gameObject);

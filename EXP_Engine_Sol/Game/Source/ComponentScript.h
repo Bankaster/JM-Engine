@@ -7,7 +7,8 @@
 class ComponentScript : public Component
 {
 private:
-
+	
+	bool inGameMode = false;
 
 public:
 	ComponentScript(GameObject* parent);
@@ -17,5 +18,7 @@ public:
 	void Update() override;
 	void Disable() override;
 	void DrawInspector() override;
+	
+	void setGameMode(bool b);
 
 };

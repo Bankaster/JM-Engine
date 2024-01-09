@@ -15,7 +15,7 @@ class ModuleEditor;
 class ModuleCamera3D;
 class ModuleImport;
 class ModuleScene;
-class Scripting;
+//class Scripting;
 
 class Application
 {
@@ -27,7 +27,7 @@ public:
 	ModuleEditor* editor;
 	ModuleImport* importer;
 	ModuleScene* scene;
-	Scripting* scripting;
+	//Scripting* scripting;
 
 private:
 

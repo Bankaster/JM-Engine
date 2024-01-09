@@ -8,6 +8,7 @@
 #include "GameObject.h"
 #include "ModuleImport.h"
 #include "ModuleCamera3D.h"
+#include "ComponentScript.h"
 
 #include "../External/Glew/include/glew.h"
 #include "../External/SDL/include/SDL_opengl.h"
@@ -639,12 +640,26 @@ void ModuleEditor::DrawPausePlay()
 		{
 			if (App->scene->gameTime.IsRunning()) App->scene->gameTime.Stop();
 			else if (!App->scene->gameTime.IsRunning()) App->scene->gameTime.Resume();
+			for each (GameObject* var in App->scene->gameObjects)
+			{
+				if (var->HasComponent(typeComponent::Scripts)) {
+					ComponentScript* gameO = (ComponentScript*)var->GetComponent(typeComponent::Scripts);
+					gameO->setGameMode(App->scene->gameTime.IsRunning());
+				}
+			}
 		}
 		ImGui::SameLine();
 
 		if (ImGui::Button("Stop"))
 		{
 			if (App->scene->gameTime.Read() > 0) App->scene->gameTime.ReStart();
+			for each (GameObject * var in App->scene->gameObjects)
+			{
+				if (var->HasComponent(typeComponent::Scripts)) {
+					ComponentScript* gameO = (ComponentScript*)var->GetComponent(typeComponent::Scripts);
+					gameO->setGameMode(false);
+				}
+			}
 		}
 		ImGui::SameLine();
 

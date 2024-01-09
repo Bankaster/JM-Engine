@@ -3,6 +3,8 @@
 #include "ModuleCamera3D.h"
 #include "ModuleImport.h"
 #include "ModuleWindow.h"
+#include "ComponentScript.h"
+#include "ComponentTexture.h"
 
 
 
@@ -43,7 +45,40 @@ bool ModuleScene::Init()
 	gizmoOperation = ImGuizmo::OPERATION::TRANSLATE;
 	gizmoMode = ImGuizmo::MODE::WORLD;
 
+	//GameObject* checkVar = CreateGameObject("check var", rootGameObject);
+	//ComponentScript* checkScriptC = new ComponentScript(checkVar);
+	//checkVar->AddComponent(checkScriptC);
+
+	//ComponentMesh* checkMeshC = new ComponentMesh(checkVar);
+	//checkVar->AddComponent(checkMeshC);
+	//checkMeshC->SetMesh(&App->importer->p);
+
+
 	return ret;
+}
+
+bool ModuleScene::Start()
+{
+	//GameObject* checkVar = CreateGameObject("check var", rootGameObject);
+	//ComponentScript* checkScriptC = new ComponentScript(checkVar);
+	//checkVar->AddComponent(checkScriptC);
+
+	//ComponentMesh* checkMeshC = new ComponentMesh(checkVar);
+	//checkVar->AddComponent(checkMeshC);
+	//checkMeshC->SetMesh(&App->importer->meshes[1]);
+
+	//ComponentTexture* checkTextureC = new ComponentTexture(checkVar);
+	//checkVar->AddComponent(checkTextureC);
+	//checkTextureC->SetTexture(App->importer->LoadTexture("Assets/Textures/Guitar.png"));
+
+	App->importer->ReadFile("Assets/Models/Guitar.fbx");
+	App->importer->ReadFile("Assets/Textures/Guitar.png");
+
+	GameObject* modelAccess = gameObjects.back();
+	ComponentScript* checkScriptC = new ComponentScript(modelAccess);
+    modelAccess->AddComponent(checkScriptC);
+
+	return true;
 }
 
 // PreUpdate: clear buffer

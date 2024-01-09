@@ -15,17 +15,36 @@ ComponentScript::~ComponentScript()
 
 void ComponentScript::Enable()
 {
+	inGameMode = true;
 }
 
-void ComponentScript::Update()
+void ComponentScript::Update() 
 {
+	if (!inGameMode) {
+		return;
+	}
 	LOG("Component Script update");
+	parent->transform->SetPosition({ 10,10,0 });
 }
 
 void ComponentScript::Disable()
 {
+	inGameMode = false;
 }
 
 void ComponentScript::DrawInspector()
 {
+
+}
+
+void ComponentScript::setGameMode(bool b)
+{
+
+	if (b == true) {
+		Enable();
+	}
+	else {
+		Disable();
+	}
+
 }
