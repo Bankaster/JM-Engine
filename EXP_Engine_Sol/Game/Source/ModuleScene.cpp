@@ -5,6 +5,7 @@
 #include "ModuleWindow.h"
 #include "ComponentScript.h"
 #include "ComponentTexture.h"
+#include "ScriptTank.h"
 
 
 
@@ -45,38 +46,21 @@ bool ModuleScene::Init()
 	gizmoOperation = ImGuizmo::OPERATION::TRANSLATE;
 	gizmoMode = ImGuizmo::MODE::WORLD;
 
-	//GameObject* checkVar = CreateGameObject("check var", rootGameObject);
-	//ComponentScript* checkScriptC = new ComponentScript(checkVar);
-	//checkVar->AddComponent(checkScriptC);
-
-	//ComponentMesh* checkMeshC = new ComponentMesh(checkVar);
-	//checkVar->AddComponent(checkMeshC);
-	//checkMeshC->SetMesh(&App->importer->p);
-
 
 	return ret;
 }
 
 bool ModuleScene::Start()
 {
-	//GameObject* checkVar = CreateGameObject("check var", rootGameObject);
-	//ComponentScript* checkScriptC = new ComponentScript(checkVar);
-	//checkVar->AddComponent(checkScriptC);
 
-	//ComponentMesh* checkMeshC = new ComponentMesh(checkVar);
-	//checkVar->AddComponent(checkMeshC);
-	//checkMeshC->SetMesh(&App->importer->meshes[1]);
+	App->importer->ReadFile("Assets/Models/BakerHouse.fbx");
+	App->importer->ReadFile("Assets/Textures/BakerHouse.png");
 
-	//ComponentTexture* checkTextureC = new ComponentTexture(checkVar);
-	//checkVar->AddComponent(checkTextureC);
-	//checkTextureC->SetTexture(App->importer->LoadTexture("Assets/Textures/Guitar.png"));
+	GameObject* tankGameObject = gameObjects.back();
+	ScriptTank* checkTank = new ScriptTank(tankGameObject);
+	tankGameObject->AddComponent(checkTank);
+	
 
-	App->importer->ReadFile("Assets/Models/Guitar.fbx");
-	App->importer->ReadFile("Assets/Textures/Guitar.png");
-
-	GameObject* modelAccess = gameObjects.back();
-	ComponentScript* checkScriptC = new ComponentScript(modelAccess);
-    modelAccess->AddComponent(checkScriptC);
 
 	return true;
 }

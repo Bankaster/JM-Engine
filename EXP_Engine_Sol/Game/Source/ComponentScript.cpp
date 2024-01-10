@@ -24,7 +24,6 @@ void ComponentScript::Update()
 		return;
 	}
 	LOG("Component Script update");
-	parent->transform->SetPosition({ 10,10,0 });
 }
 
 void ComponentScript::Disable()

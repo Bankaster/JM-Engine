@@ -304,6 +304,7 @@
     <ClInclude Include="Game\Source\Primitive.h" />
     <ClInclude Include="Game\Source\Random.h" />
     <ClInclude Include="Game\Source\Scripting.h" />
+    <ClInclude Include="Game\Source\ScriptTank.h" />
     <ClInclude Include="Game\Source\Timer.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
@@ -376,6 +377,7 @@
     <ClCompile Include="Game\Source\Primitive.cpp" />
     <ClCompile Include="Game\Source\Random.cpp" />
     <ClCompile Include="Game\Source\Scripting.cpp" />
+    <ClCompile Include="Game\Source\ScriptTank.cpp" />
     <ClCompile Include="Game\Source\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>

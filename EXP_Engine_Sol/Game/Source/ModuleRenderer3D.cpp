@@ -128,9 +128,7 @@ bool ModuleRenderer3D::Init()
 
 	Grid.axis = true;
 
-	//BakerHouse
-	App->importer->ReadFile("Assets/Models/BakerHouse.fbx");
-	App->importer->ReadFile("Assets/Textures/BakerHouse.png");
+
 
 	//Street Environment
 	//App->importer->ReadFile("Assets/Models/StreetEnvironment/StreetEnvironment.fbx");

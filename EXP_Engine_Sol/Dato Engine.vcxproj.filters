@@ -97,6 +97,9 @@
     <Filter Include="Source\CustomFileFormat">
       <UniqueIdentifier>{f664b8cc-3a86-4bdb-b840-1adb279b5b2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Scripts">
+      <UniqueIdentifier>{6c2dbdef-fae7-4162-a3c7-e3e4749a838a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\External\DevIL\include\devil_cpp_wrapper.hpp">
@@ -783,6 +786,9 @@
     <ClInclude Include="Game\Source\ComponentScript.h">
       <Filter>Source\GameObjects\Components</Filter>
     </ClInclude>
+    <ClInclude Include="Game\Source\ScriptTank.h">
+      <Filter>Source\Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\External\DevIL\include\luadevil.c">
@@ -991,6 +997,9 @@
     </ClCompile>
     <ClCompile Include="Game\Source\ComponentScript.cpp">
       <Filter>Source\GameObjects\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Source\ScriptTank.cpp">
+      <Filter>Source\Scripts</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
