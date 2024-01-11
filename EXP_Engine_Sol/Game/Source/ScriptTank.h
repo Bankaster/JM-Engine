@@ -15,6 +15,14 @@ public:
 	void Disable() override;
 	void DrawInspector() override;
 
-	float moveSpeed = 1.0f;
+	float moveSpeed = 8.0f;
+	float cannonRotation = 0.0f;
+	float rotationSpeed = 3.0f;
+	
+private:
+
+	GameObject* cannon;
+	bool cannonActive = false;
+	int actualMousePosition;
 
 };

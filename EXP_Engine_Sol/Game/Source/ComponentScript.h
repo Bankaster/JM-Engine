@@ -6,19 +6,14 @@
 
 class ComponentScript : public Component
 {
-private:
-	
-	bool inGameMode = false;
 
 public:
 	ComponentScript(GameObject* parent);
 	~ComponentScript();
 
-	void Enable() override;
-	void Update() override;
-	void Disable() override;
-	void DrawInspector() override;
-	
-	void setGameMode(bool b);
+	void Enable() override = 0;
+	void Update() override = 0;
+	void Disable() override = 0;
+	void DrawInspector() override = 0;
 
 };

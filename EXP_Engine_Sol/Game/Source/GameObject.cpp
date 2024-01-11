@@ -115,7 +115,12 @@ void GameObject::Update()
 
 		for (; item != components.end() && ret == true; ++item)
 		{
-			(*item)->Update();
+			if ((*item)->type != typeComponent::Scripts) {
+				(*item)->Update();
+			}
+			if ((*item)->type == typeComponent::Scripts && ExternalApp->scene->gameTime.IsRunning()) {
+				(*item)->Update();
+			}
 		}
 	}
 }

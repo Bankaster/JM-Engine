@@ -644,7 +644,12 @@ void ModuleEditor::DrawPausePlay()
 			{
 				if (var->HasComponent(typeComponent::Scripts)) {
 					ComponentScript* gameO = (ComponentScript*)var->GetComponent(typeComponent::Scripts);
-					gameO->setGameMode(App->scene->gameTime.IsRunning());
+					if (App->scene->gameTime.IsRunning()) {
+						gameO->Enable();
+					}
+					else {
+						gameO->Disable();
+					}
 				}
 			}
 		}
@@ -652,15 +657,19 @@ void ModuleEditor::DrawPausePlay()
 
 		if (ImGui::Button("Stop"))
 		{
-			if (App->scene->gameTime.Read() > 0) App->scene->gameTime.ReStart();
-			for each (GameObject * var in App->scene->gameObjects)
-			{
-				if (var->HasComponent(typeComponent::Scripts)) {
-					ComponentScript* gameO = (ComponentScript*)var->GetComponent(typeComponent::Scripts);
-					gameO->setGameMode(false);
+			if (App->scene->gameTime.Read() > 0) {
+				App->scene->gameTime.ReStart();
+
+				for each (GameObject * var in App->scene->gameObjects)
+				{
+					if (var->HasComponent(typeComponent::Scripts)) {
+						ComponentScript* gameO = (ComponentScript*)var->GetComponent(typeComponent::Scripts);
+						gameO->Disable();
+					}
 				}
 			}
-		}
+	    }
+			
 		ImGui::SameLine();
 
 		if (ImGui::Button("Step"))

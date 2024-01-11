@@ -13,37 +13,5 @@ ComponentScript::~ComponentScript()
 {
 }
 
-void ComponentScript::Enable()
-{
-	inGameMode = true;
-}
 
-void ComponentScript::Update() 
-{
-	if (!inGameMode) {
-		return;
-	}
-	LOG("Component Script update");
-}
 
-void ComponentScript::Disable()
-{
-	inGameMode = false;
-}
-
-void ComponentScript::DrawInspector()
-{
-
-}
-
-void ComponentScript::setGameMode(bool b)
-{
-
-	if (b == true) {
-		Enable();
-	}
-	else {
-		Disable();
-	}
-
-}
