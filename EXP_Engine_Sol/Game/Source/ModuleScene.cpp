@@ -38,7 +38,7 @@ bool ModuleScene::Init()
 
 	//Set the game camera starter position
 	gameCameraObject->transform->SetPosition(float3(0.0f, 50.0f, 0.0f));
-	gameCameraObject->transform->SetRotation(Quat::FromEulerXYZ(90.0f, 0.0, 0.0f));
+	gameCameraObject->transform->SetRotation(Quat::FromEulerXYZ(90.0f * 3.14f/180, 0.0, 0.0f));
 
 	totalCameras.push_back(gameCamera);
 	totalCameras.push_back(App->camera->editorCamera);
@@ -56,7 +56,7 @@ bool ModuleScene::Start()
 	App->importer->ReadFile("Assets/Models/BakerHouse.fbx");
 	App->importer->ReadFile("Assets/Textures/BakerHouse.png");
 
-	GameObject* tankGameObject = gameObjects.back();
+	GameObject* tankGameObject = gameObjects.back()->Parent;
 	ScriptTank* checkTank = new ScriptTank(tankGameObject);
 	tankGameObject->AddComponent(checkTank);
 	

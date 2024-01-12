@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "ModuleInput.h"
 #include "ModuleScene.h"
+#include "Bullet.h"
 
 
 
@@ -18,7 +19,7 @@ ScriptTank::~ScriptTank()
 void ScriptTank::Enable()
 {
 
-	cannon = parent->Parent->children[0];
+	cannon = parent->children[0];
 	//cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, cannonRotation, 0.0f));
 
 	LOG("Script tank enabled");
@@ -27,29 +28,33 @@ void ScriptTank::Enable()
 void ScriptTank::Update()
 {
 
-	float3 actualPosition = parent->Parent->transform->GetPosition();
+	float3 actualPosition = parent->transform->GetPosition();
 
 	//Base Movement
 	if(ExternalApp->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT)
 	{
-		actualPosition.x += moveSpeed*ExternalApp->DT();
+		//actualPosition.x += moveSpeed*ExternalApp->DT();
+		tankRotation += rotationTankSpeed * ExternalApp->DT();
 
 	}
 	else if (ExternalApp->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT) 
 	{
-		actualPosition.x -= moveSpeed*ExternalApp->DT();
-
+		//actualPosition.x -= moveSpeed*ExternalApp->DT();
+		tankRotation -= rotationTankSpeed * ExternalApp->DT();
 	}
-	else if (ExternalApp->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT)
-	{
-		actualPosition.z += moveSpeed*ExternalApp->DT();
 
+	if (ExternalApp->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT)
+	{
+		//actualPosition.z += moveSpeed*ExternalApp->DT();
+		actualPosition += parent->transform->GetForward() * moveSpeed * ExternalApp->DT();
 	}
 	else if (ExternalApp->input->GetKey(SDL_SCANCODE_S) == KEY_REPEAT)
 	{
-		actualPosition.z -= moveSpeed*ExternalApp->DT();	
+		//actualPosition.z -= moveSpeed*ExternalApp->DT();
+		actualPosition -= parent->transform->GetForward() * moveSpeed * ExternalApp->DT();
 	}
-	parent->Parent->transform->SetPosition(actualPosition);
+	parent->transform->SetPosition(actualPosition);
+	parent->transform->SetRotation(Quat::FromEulerXYZ(0.0f, tankRotation, 0.0f));
 
 	//Cannon Movement
 	
@@ -83,7 +88,7 @@ void ScriptTank::Update()
 
 		}
 
-		cannonRotation += (rotationSpeed * rotationDirection) * ExternalApp->DT();
+		cannonRotation += (rotationCannonSpeed * rotationDirection) * ExternalApp->DT();
 
 		cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, cannonRotation, 0.0f));
 	}
@@ -94,9 +99,14 @@ void ScriptTank::Update()
 	{
 		ExternalApp->importer->ReadFile("Assets/Models/Primitives/Sphere.fbx");
 		ExternalApp->importer->ReadFile("Assets/Textures/Guitar.png");
-		GameObject* bulletRef = ExternalApp->scene->gameObjects.back();
-		bulletRef->transform->SetGlobalPosition(parent->Parent->transform->GetPosition());
+		GameObject* bulletRef = ExternalApp->scene->gameObjects.back()->Parent;
+
+		float3 bulletSpawnPos = parent->transform->GetPosition() + cannon->transform->GetForward() * 2.0f;
+		bulletRef->transform->SetPosition(bulletSpawnPos);
 		bulletRef->transform->SetScale({ 0.5,0.5,0.5 });
+		Bullet* bulletScript = new Bullet(bulletRef);
+		bulletRef->AddComponent(bulletScript);
+		bulletScript->ShotBullet(cannon->transform->GetForward() + parent->transform->GetRotation().ToEulerXYZ().Normalized(), 0.5, 5.0f);
 	}
 }
 

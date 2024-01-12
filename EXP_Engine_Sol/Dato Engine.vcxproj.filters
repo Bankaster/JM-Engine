@@ -789,6 +789,9 @@
     <ClInclude Include="Game\Source\ScriptTank.h">
       <Filter>Source\Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="Game\Source\Bullet.h">
+      <Filter>Source\Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\External\DevIL\include\luadevil.c">
@@ -999,6 +1002,9 @@
       <Filter>Source\GameObjects\Components</Filter>
     </ClCompile>
     <ClCompile Include="Game\Source\ScriptTank.cpp">
+      <Filter>Source\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Source\Bullet.cpp">
       <Filter>Source\Scripts</Filter>
     </ClCompile>
   </ItemGroup>

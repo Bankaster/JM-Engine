@@ -16,13 +16,15 @@ public:
 	void DrawInspector() override;
 
 	float moveSpeed = 8.0f;
-	float cannonRotation = 0.0f;
-	float rotationSpeed = 3.0f;
+	float rotationCannonSpeed = 3.0f;
+	float rotationTankSpeed = 3.0f;
 	
 private:
 
 	GameObject* cannon;
 	bool cannonActive = false;
 	int actualMousePosition;
+	float tankRotation = 0.0f;
+	float cannonRotation = 0.0f;
 
 };

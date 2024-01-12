@@ -118,7 +118,7 @@ void GameObject::Update()
 			if ((*item)->type != typeComponent::Scripts) {
 				(*item)->Update();
 			}
-			if ((*item)->type == typeComponent::Scripts && ExternalApp->scene->gameTime.IsRunning()) {
+			if ((*item)->type == typeComponent::Scripts && ExternalApp->scene->gameTime.IsRunning() && active) {
 				(*item)->Update();
 			}
 		}
