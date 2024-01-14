@@ -37,20 +37,20 @@ void ModuleImport::ReadFile(const char* file_path)
 		LOG("START LOADING MODEL");
 
 		//The new game object is children of some game object
-		if (App->scene->gameObjectSelected != nullptr && App->scene->gameObjectSelected != App->scene->rootGameObject)
-		{
-			GO = typeOfGO::CHILD_OF_OBJECT;
-			LoadMesh(file_path);
-			LOG("MODEL LOADED");
-		}
+		//if (App->scene->gameObjectSelected != nullptr && App->scene->gameObjectSelected != App->scene->rootGameObject)
+		//{
+		//	GO = typeOfGO::CHILD_OF_OBJECT;
+		//	LoadMesh(file_path);
+		//	LOG("MODEL LOADED");
+		//}
 
 		//The new game object is no child, so is child of scene
-		else
-		{
-			GO = typeOfGO::CHILD_OF_SCENE;
-			LoadMesh(file_path);
-			LOG("MODEL LOADED");
-		}
+		
+		
+		GO = typeOfGO::CHILD_OF_SCENE;
+		LoadMesh(file_path);
+		LOG("MODEL LOADED");
+		
 
 		break;
 

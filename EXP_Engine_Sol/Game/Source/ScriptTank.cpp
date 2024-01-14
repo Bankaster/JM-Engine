@@ -135,7 +135,7 @@ void ScriptTank::Disable()
 	//{
 	//	ExternalApp->scene->DeleteGameObject(bulletPool[i]);
 	//}
-	bulletPool.clear();
+	//bulletPool.clear();
 	LOG("Script Tank disabled");
 
 }
@@ -143,10 +143,13 @@ void ScriptTank::Disable()
 void ScriptTank::DrawInspector()
 {
 
-	if (ImGui::CollapsingHeader("Tank Script")) {
-		float tempMoveSpeed = moveSpeed;
-		ImGui::InputFloat("movement Speed", &tempMoveSpeed);
-		moveSpeed = tempMoveSpeed;
+	if (ImGui::CollapsingHeader("Tank Script")) 
+	{
+		ImGui::PushItemWidth(50);
+		ImGui::InputFloat("move Speed", &moveSpeed);
+		ImGui::InputFloat("Tank Rotation Speed", &rotationTankSpeed);
+		ImGui::InputFloat("Cannon Rotation Speed", &rotationCannonSpeed);
+		ImGui::PopItemWidth();
 	}
 
 }
