@@ -26,5 +26,6 @@ private:
 	int actualMousePosition;
 	float tankRotation = 0.0f;
 	float cannonRotation = 0.0f;
+	std::vector <GameObject*> bulletPool;
 
 };

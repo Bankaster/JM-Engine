@@ -38,6 +38,7 @@ public:
 
 	float3 GetUp();
 	float3 GetForward();
+	float3 GetRight();
 
 	float3 GetPosition() const { return this->gPosition; };
 	Quat GetRotation() const { return this->gRotation; };

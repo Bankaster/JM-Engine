@@ -113,12 +113,17 @@ float4x4 ComponentTransform::SetLocalTransform(float4x4 transformMatrix)
 
 float3 ComponentTransform::GetUp()
 {
-	return transform.RotatePart().Col(1).Normalized();
+	return gTransform.RotatePart().Col(1).Normalized();
 }
 
 float3 ComponentTransform::GetForward()
 {
-	return transform.RotatePart().Col(2).Normalized();
+	return gTransform.RotatePart().Col(2).Normalized();
+}
+
+float3 ComponentTransform::GetRight()
+{
+	return gTransform.RotatePart().Col(0).Normalized();
 }
 
 void ComponentTransform::UpdateMatrix()

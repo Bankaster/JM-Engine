@@ -48,11 +48,17 @@ GameObject::~GameObject()
 void GameObject::Enable() //Start up + bool toggle
 {
 	this->active = true;
+	for each (GameObject * c in children) {
+		c->Enable();
+	}
 }
 
 void GameObject::Disable()
 {
 	this->active = false;
+	for each (GameObject * c in children) {
+		c->Disable();
+	}
 }
 
 void GameObject::EnableParent()

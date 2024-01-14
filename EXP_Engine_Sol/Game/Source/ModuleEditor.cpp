@@ -644,11 +644,8 @@ void ModuleEditor::DrawPausePlay()
 			{
 				if (var->HasComponent(typeComponent::Scripts)) {
 					ComponentScript* gameO = (ComponentScript*)var->GetComponent(typeComponent::Scripts);
-					if (App->scene->gameTime.IsRunning()) {
+					if (App->scene->gameTime.IsRunning() && App->scene->gameTime.Read() == 0) {
 						gameO->Enable();
-					}
-					else {
-						gameO->Disable();
 					}
 				}
 			}

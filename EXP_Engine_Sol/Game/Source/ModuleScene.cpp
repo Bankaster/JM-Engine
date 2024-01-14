@@ -53,12 +53,13 @@ bool ModuleScene::Init()
 bool ModuleScene::Start()
 {
 
-	App->importer->ReadFile("Assets/Models/BakerHouse.fbx");
+	App->importer->ReadFile("Assets/Models/CENTURION.fbx");
 	App->importer->ReadFile("Assets/Textures/BakerHouse.png");
 
 	GameObject* tankGameObject = gameObjects.back()->Parent;
 	ScriptTank* checkTank = new ScriptTank(tankGameObject);
 	tankGameObject->AddComponent(checkTank);
+
 	
 
 
