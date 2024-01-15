@@ -71,9 +71,9 @@ void ScriptTank::Update()
 	actualRotation.y += tankRotation;
 	parent->transform->SetRotation(Quat::FromEulerXYZ(0.0f,tankRotation, 0.0f));
 
-	//Cannon Movement
+	/////////Cannon Movement
 	
-	if (ExternalApp->input->GetMouseButton(SDL_BUTTON_RIGHT) == KEY_DOWN)
+	/*if (ExternalApp->input->GetMouseButton(SDL_BUTTON_RIGHT) == KEY_DOWN)
 	{
 		cannonActive = true;
 		actualMousePosition = ExternalApp->input->GetMouseX();
@@ -106,7 +106,17 @@ void ScriptTank::Update()
 		cannonRotation += (rotationCannonSpeed * rotationDirection) * ExternalApp->DT();
 
 		cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, cannonRotation, 0.0f));
-	}
+	}*/
+
+	float3 mousePosition;
+	float3 tankPosition = parent->transform->GetPosition();
+
+	mousePosition.x = ExternalApp->input->GetMouseX();
+	mousePosition.y = ExternalApp->input->GetMouseY();
+
+	tankPosition.x += 1050;
+	tankPosition.y += 400;
+
 
 	//Tank Shooting
 
