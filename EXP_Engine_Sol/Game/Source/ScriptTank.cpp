@@ -19,9 +19,8 @@ ScriptTank::~ScriptTank()
 void ScriptTank::Enable()
 {
 	cannon = parent->children[0];
-	cannon->transform->SetPosition({ 0.0f, 0.0f, 5.0f });
+	//cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, cannonRotation, 0.0f));
 
-	
 
 	LOG("Script tank enabled");
 }

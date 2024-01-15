@@ -37,7 +37,7 @@ bool ModuleScene::Init()
 
 
 	//Set the game camera starter position
-	gameCameraObject->transform->SetPosition(float3(0.0f, 50.0f, 0.0f));
+	gameCameraObject->transform->SetPosition(float3(0.0f, 40.0f, 0.0f));
 	gameCameraObject->transform->SetRotation(Quat::FromEulerXYZ(90.0f * 3.14f/180, 0.0, 0.0f));
 
 	totalCameras.push_back(gameCamera);
@@ -54,7 +54,7 @@ bool ModuleScene::Start()
 {
 
 	App->importer->ReadFile("Assets/Models/CENTURION.fbx");
-	App->importer->ReadFile("Assets/Textures/BakerHouse.png");
+	App->importer->ReadFile("Assets/Textures/TankTexture1.png");
 
 	GameObject* tankGameObject = gameObjects.back()->Parent;
 	ScriptTank* checkTank = new ScriptTank(tankGameObject);
