@@ -16,4 +16,7 @@ public:
 	void Disable() override = 0;
 	void DrawInspector() override = 0;
 
+ protected:
+
+	std::string scriptText;
 };

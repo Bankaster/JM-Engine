@@ -3,12 +3,18 @@
 #include "ModuleInput.h"
 #include "ModuleScene.h"
 #include "Bullet.h"
+#include <streambuf>
+#include <fstream>
+
 
 
 
 ScriptTank::ScriptTank(GameObject* parent):ComponentScript(parent)
 {
-
+	std::ifstream archivo(__FILE__);
+	std::string str((std::istreambuf_iterator<char>(archivo)),
+		std::istreambuf_iterator<char>());
+	scriptText = str;
 }
 
 ScriptTank::~ScriptTank()
@@ -128,6 +134,9 @@ void ScriptTank::DrawInspector()
 		ImGui::InputFloat("Tank Rotation Speed", &rotationTankSpeed);
 		ImGui::InputFloat("Cannon Rotation Speed", &rotationCannonSpeed);
 		ImGui::PopItemWidth();
+
+		ImGui::Text(scriptText.c_str());
 	}
+
 
 }

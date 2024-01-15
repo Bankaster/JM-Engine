@@ -54,11 +54,27 @@ bool ModuleScene::Start()
 {
 
 	App->importer->ReadFile("Assets/Models/CENTURION.fbx");
-	App->importer->ReadFile("Assets/Textures/TankTexture1.png");
+	App->importer->ReadFile("Assets/Textures/ghile.png");
 
 	GameObject* tankGameObject = gameObjects.back()->Parent;
 	ScriptTank* checkTank = new ScriptTank(tankGameObject);
 	tankGameObject->AddComponent(checkTank);
+
+	int houseAmountY = 3;
+	int houseAmountX = 3;
+	float spaceBetweenHousesX = 17.0f;
+	float spaceBetweenHousesY = 18.0f;
+
+	for (int i = 0; i < houseAmountX; i++) {
+		for (int j = 0; j < houseAmountY; j++) {
+			if (i == 0 || i == houseAmountX - 1 || j == 0 || j == houseAmountY - 1) {
+				App->importer->ReadFile("Assets/Models/BakerHouse.fbx");
+				App->importer->ReadFile("Assets/Textures/BakerHouse.png");
+				GameObject* houseGameObject = gameObjects.back()->Parent;
+				houseGameObject->transform->SetPosition({ 17.0f - (i * spaceBetweenHousesX), 0.0f, 19.0f - (j * spaceBetweenHousesY) });
+			}
+		}
+	}
 
 	
 
