@@ -18,9 +18,11 @@ ScriptTank::~ScriptTank()
 
 void ScriptTank::Enable()
 {
-
 	cannon = parent->children[0];
-	//cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, cannonRotation, 0.0f));
+	cannon->transform->SetPosition({ 0.0f, 0.0f, 5.0f });
+
+	
+
 	LOG("Script tank enabled");
 }
 
@@ -47,67 +49,28 @@ void ScriptTank::Update()
 	//Base Movement
 	if(ExternalApp->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT)
 	{
-		//actualPosition.x += moveSpeed*ExternalApp->DT();
 		tankRotation += rotationTankSpeed * ExternalApp->DT();
 
 	}
 	else if (ExternalApp->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT) 
 	{
-		//actualPosition.x -= moveSpeed*ExternalApp->DT();
 		tankRotation -= rotationTankSpeed * ExternalApp->DT();
 	}
 
 	if (ExternalApp->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT)
 	{
-		//actualPosition.z += moveSpeed*ExternalApp->DT();
 		actualPosition += parent->transform->GetForward() * moveSpeed * ExternalApp->DT();
 	}
 	else if (ExternalApp->input->GetKey(SDL_SCANCODE_S) == KEY_REPEAT)
 	{
-		//actualPosition.z -= moveSpeed*ExternalApp->DT();
 		actualPosition -= parent->transform->GetForward() * moveSpeed * ExternalApp->DT();
 	}
 	parent->transform->SetPosition(actualPosition);
 	actualRotation.y += tankRotation;
 	parent->transform->SetRotation(Quat::FromEulerXYZ(0.0f,tankRotation, 0.0f));
 
-	/////////Cannon Movement
+	//Cannon Movement
 	
-	/*if (ExternalApp->input->GetMouseButton(SDL_BUTTON_RIGHT) == KEY_DOWN)
-	{
-		cannonActive = true;
-		actualMousePosition = ExternalApp->input->GetMouseX();
-	}
-
-	else if (ExternalApp->input->GetMouseButton(SDL_BUTTON_RIGHT) == KEY_UP)
-	{
-		cannonActive = false;
-	}
-
-
-	if (cannonActive) 
-	{
-
-		int mousePositionDif = actualMousePosition - ExternalApp->input->GetMouseX();
-
-		int rotationDirection = 0;
-
-		if (mousePositionDif > 0) {
-
-			rotationDirection = 1;
-
-		}
-		else if (mousePositionDif < 0) {
-
-			rotationDirection = -1;
-
-		}
-
-		cannonRotation += (rotationCannonSpeed * rotationDirection) * ExternalApp->DT();
-
-		cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, cannonRotation, 0.0f));
-	}*/
-
 	float3 mousePosition;
 	float3 tankPosition = parent->transform->GetPosition();
 
@@ -144,13 +107,16 @@ void ScriptTank::Update()
 
 void ScriptTank::Disable()
 {
-	//for (int i = 0; i < bulletPool.size(); i++)
-	//{
-	//	ExternalApp->scene->DeleteGameObject(bulletPool[i]);
-	//}
-	//bulletPool.clear();
-	LOG("Script Tank disabled");
+	for (int i = 0; i < bulletPool.size(); i++)
+	{
+		bulletPool[i]->Disable();
+	}
+	
+	parent->transform->SetPosition({ 0.0f,0.0f,0.0f });
+	parent->transform->SetRotation(Quat::FromEulerXYZ(0.0f, 0.0f, 0.0f));
+	cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, 0.0f, 0.0f));
 
+	LOG("Script Tank disabled");
 }
 
 void ScriptTank::DrawInspector()
