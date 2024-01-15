@@ -117,6 +117,9 @@ void ScriptTank::Update()
 	tankPosition.x += 1050;
 	tankPosition.y += 400;
 
+	float3 cannonDirection = tankPosition - mousePosition;
+	float angle = atan2(cannonDirection.x, cannonDirection.y);
+	cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, angle, 0.0f));
 
 	//Tank Shooting
 
