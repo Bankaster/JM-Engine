@@ -30,8 +30,6 @@ void Bullet::Update()
 		parent->children[0]->Disable();
 	}
 
-	LOG("Hola soc una bala");
-
 }
 
 void Bullet::Disable()
@@ -49,4 +47,5 @@ void Bullet::ShotBullet(float3 dir, float speed, float time)
 	bulletDirection = dir.Normalized();
 	bulletSpeed = speed;
 
+	LOG("New Bullet Creation");
 }
