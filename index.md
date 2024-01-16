@@ -1,15 +1,21 @@
-# ![CapturaReadme](https://media.discordapp.net/attachments/1046911945695043725/1196872908425936966/JM_Engine_tittle.png)
+# JM Engine
 
-Project GitHub page: (https://github.com/JoanDamia/MJ-Motor)
+Logo:
+
+(<https://media.discordapp.net/attachments/1046911945695043725/1196878552453365790/JM.png>)
+
+The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.
+
+Developers GitHub:
+
+[Joan Damià]((<https://github.com/JoanDamia>))
+
+[Miguel Rodríguez]((<https://github.com/Bankaster>))
 
 
-3D engine made by:
+Also this Engine is forked from another CITM 3D Engine, you can check the original repesitory here:
 
-Miguel Rodríguez. GitHub: (https://github.com/Bankaster)
-
-Joan Damià. GitHub: (https://github.com/JoanDamia)
-
-Engine made by two CITM students, capable of multible features like fbx rendering, drag and drop, camera movement and much more to come.
+[Original Repository]((https://github.com/DaniMariages/DaTo-Engine)
 
 
 ## Features:
