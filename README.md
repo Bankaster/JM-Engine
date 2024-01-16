@@ -1,12 +1,17 @@
-# DaTo Engine by Toni Romanos & Dani Mariages.
-DaTo Engine is a videogame engine developed for the MOTORS DE VIDEOJOCS course at CITM.
+# JM-Engine by Joan Damià & Miguel Rodríguez.
+The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.
 
 This engine is developed by:
-- Dani Mariages - [DaniMariages](<https://github.com/DaniMariages>)
-- Toni Romanos - [Toto-RR](<https://github.com/Toto-RR>)
-- Github repository: [DaTo Engine](<https://github.com/DaniMariages/DaTo-Engine>)
+- Joan Damià - [Joan Damià](<https://github.com/JoanDamia>)
+- Miguel Rodríguez - [Miguel Rodríguez](<https://github.com/Bankaster>)
+  
+Github repository: [JM-Engine](<https://github.com/Bankaster/JM-Engine>)
 
-## Keybinds:
+This Engine is forked from another CITM 3D Engine, you can check the original repesitory here:
+
+Original repository: [DaTo Engine](<https://github.com/DaniMariages/DaTo-Engine>)
+
+## Debug Controls:
 - Left Control --> Center selected object
 - Left shift --> Duplicate movement speed
 - Right Click --> FPS camera
@@ -18,6 +23,7 @@ This engine is developed by:
 - Down Arrow --> Back view
 - Scroll up --> Zoom in
 - Scroll down --> Zoom out
+
   
 ### FPS movement:
 - W --> Move forward
@@ -26,17 +32,29 @@ This engine is developed by:
 - D --> Move right
 - R --> Move up
 - F --> Move down
+
   
 ### While selected (Guizmo):
 - W --> Position
 - R --> Scale
 - E --> Rotate
 - T --> Universal
+
+
+### Play Controls:
+- W --> Move forward
+- A --> Rotate left
+- S --> Move backwards
+- D --> Rotate right
+- Mouse Movement --> Aim Shoot
+- Right Click --> Shoot
+
   
 ### Additional functionalities
 - Top, sides, back and front view (Reworked).
 - Quick options when you right click on the Game Objects displayed in the Hierarchy
 - Reparent game objects one is selected and dragged to another one
+
 
 ## Features v0.1
 - Loading models and textures with Assimp and DevIL.
@@ -47,6 +65,7 @@ This engine is developed by:
 - Hierarchy system.
 - Drag & Drop for all supported formats.
 - Game Objects with texture, mesh and transform components.
+
 
 ## Features v0.5
 - Game objects can have a camera component.
@@ -65,6 +84,16 @@ This engine is developed by:
 - Game Object can be renamed from Inspector.
 - If an object is repeated, the name will change to: Name + (number of repetitions).
 
+
+## Features v1.0
+- The Tank moves and rotates with keyboard controls and the turret rotates with the mouse.
+- When Play Mode stops the Tank positions resets.
+- The Tank shoots bullets with right click.
+- The Bullets are game objects with a life time.
+- When a bullet is created, a text appears in the Console window.
+- The script variables of the tank are modifiable in the Inspector window.
+
+
 ## Libraries
 - [Assimp](<https://github.com/assimp/assimp.git>)
 - [DevIL](<https://openil.sourceforge.net>)
@@ -74,15 +103,3 @@ This engine is developed by:
 - [SDL](<https://www.libsdl.org>)
 - [Parson](<https://github.com/kgabis/parson>)
 - [PCG](<https://www.pcg-random.org>)
-
-## Photos and references
-
-![CapturaReadme](https://github.com/DaniMariages/DaTo-Engine/assets/99719601/fbd3d4fb-65b5-4bae-8e8a-eecb906d76ed)
-
-## Known bugs, missing features and others
-### Missing features:
-- Street Environment is not loaded at start (is commented), because:
-  - The Engine is not able to set textures to a specific game object, the texture is setted to the last Game Object added to the Scene.
-  - The Street Environment models were not positioned correctly.
-- Custom File Format, Serialization and Resources are not completed due to time constraints.
-  - In return, every effort has been made to polish the rest of the engine as much as possible.
