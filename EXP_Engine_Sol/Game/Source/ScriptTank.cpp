@@ -7,8 +7,6 @@
 #include <fstream>
 
 
-
-
 ScriptTank::ScriptTank(GameObject* parent):ComponentScript(parent)
 {
 	std::ifstream archivo(__FILE__);
@@ -25,7 +23,7 @@ ScriptTank::~ScriptTank()
 void ScriptTank::Enable()
 {
 	cannon = parent->children[0];
-	//cannon->transform->SetRotation(Quat::FromEulerXYZ(0.0f, cannonRotation, 0.0f));
+	
 
 
 	LOG("Script tank enabled");
@@ -38,11 +36,11 @@ void ScriptTank::Update()
 		for (int i = 0; i < 10; i++)
 		{
 			ExternalApp->importer->ReadFile("Assets/Models/Primitives/Sphere.fbx");
-			ExternalApp->importer->ReadFile("Assets/Textures/Guitar.png");
+			ExternalApp->importer->ReadFile("Assets/Textures/bulletTexture.png");
 			GameObject* bulletRef = ExternalApp->scene->gameObjects.back()->Parent;
 			bulletPool.push_back(bulletRef);
 
-			bulletRef->transform->SetScale({ 0.3,0.3,0.3 });
+			bulletRef->transform->SetScale({ 0.2,0.2,0.2 });
 			Bullet* bulletScript = new Bullet(bulletRef);
 			bulletRef->AddComponent(bulletScript);
 			bulletRef->Disable();
@@ -103,7 +101,7 @@ void ScriptTank::Update()
 				float3 bulletSpawnPos = parent->transform->GetPosition() + cannon->transform->GetForward() * 2.0f;
 				bulletPool[i]->transform->SetPosition(bulletSpawnPos);
 				Bullet* bulletRef = (Bullet*) bulletPool[i]->GetComponent(typeComponent::Scripts);
-				bulletRef->ShotBullet(cannon->transform->GetForward(), 0.5, 3.0f);
+				bulletRef->ShotBullet(cannon->transform->GetForward(), bulletSpeed, bulletLife);
 				bulletTaken = true;
 			}
 		}
@@ -130,10 +128,17 @@ void ScriptTank::DrawInspector()
 	if (ImGui::CollapsingHeader("Tank Script")) 
 	{
 		ImGui::PushItemWidth(50);
-		ImGui::InputFloat("move Speed", &moveSpeed);
-		ImGui::InputFloat("Tank Rotation Speed", &rotationTankSpeed);
-		ImGui::InputFloat("Cannon Rotation Speed", &rotationCannonSpeed);
+		ImGui::InputFloat("move Speed", &moveSpeed, 0.0F, 0.0F, "%.1f");
+		ImGui::InputFloat("Tank Rotation Speed", &rotationTankSpeed, 0.0F, 0.0F, "%.1f");
+		ImGui::InputFloat("Bullet Speed", &bulletSpeed, 0.0F, 0.0F, "%.1f");
+		ImGui::InputFloat("Bullet Life", &bulletLife, 0.0F, 0.0F, "%.1f");
 		ImGui::PopItemWidth();
+
+		bulletSpeed = bulletSpeed < 10.0f ? 10.0f : bulletSpeed;
+		moveSpeed = moveSpeed < 1.0f ? 1.0f : moveSpeed;
+		rotationTankSpeed = rotationTankSpeed < 1.0f ? 1.0f : rotationTankSpeed;
+		bulletLife = bulletLife < 1.0f ? 1.0f : bulletLife;
+
 
 		ImGui::Text(scriptText.c_str());
 	}

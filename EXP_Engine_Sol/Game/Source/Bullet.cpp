@@ -21,7 +21,7 @@ void Bullet::Update()
 		float3 actualParent = parent->transform->GetPosition();
 
 		lifeTimeCounter -= ExternalApp->DT();
-		parent->transform->SetPosition(actualParent + (bulletDirection * bulletSpeed));
+		parent->transform->SetPosition(actualParent + (bulletDirection * (bulletSpeed * ExternalApp->DT())));
 
 	}
 	else 
