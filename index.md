@@ -2,15 +2,15 @@
 
 Logo:
 
-(<https://media.discordapp.net/attachments/1046911945695043725/1196878552453365790/JM.png>)
+![CapturaReadme](https://media.discordapp.net/attachments/1046911945695043725/1196878552453365790/JM.png)
 
 The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.
 
 Developers GitHub:
 
-[Joan Damià]((<https://github.com/JoanDamia>))
+[Joan Damià](<https://github.com/JoanDamia>)
 
-[Miguel Rodríguez]((<https://github.com/Bankaster>))
+[Miguel Rodríguez](<https://github.com/Bankaster>)
 
 
 Also this Engine is forked from another CITM 3D Engine, you can check the original repesitory here:
