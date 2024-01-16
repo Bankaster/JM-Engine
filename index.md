@@ -8,11 +8,11 @@ The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by tw
 
 Developers GitHub:
 
-[Joan Damià](<https://github.com/JoanDamia>)
+Joan Damià:[Joan Damià's GitHub](<https://github.com/JoanDamia>)
 
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928451526717/Joan.png">
 
-[Miguel Rodríguez](<https://github.com/Bankaster>)
+Miguel Rodríguez: [Miguel Rodríguez's Github](<https://github.com/Bankaster>)
 
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928812220437/Miguel.png">
 
