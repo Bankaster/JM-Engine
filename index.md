@@ -10,7 +10,11 @@ Developers GitHub:
 
 [Joan Damià](<https://github.com/JoanDamia>)
 
+![CapturaReadme](https://media.discordapp.net/attachments/1046911945695043725/1196883755512627290/Joan_Damia.png)
+
 [Miguel Rodríguez](<https://github.com/Bankaster>)
+
+![CapturaReadme](https://media.discordapp.net/attachments/1046911945695043725/1196883754392768542/Miguel_Rodriguez.png)
 
 
 Also this Engine is forked from another CITM 3D Engine, you can check the original repesitory here:
