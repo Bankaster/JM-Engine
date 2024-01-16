@@ -53,7 +53,7 @@ bool ModuleScene::Init()
 bool ModuleScene::Start()
 {
 
-	App->importer->ReadFile("Assets/Models/CENTURION.fbx");
+	App->importer->ReadFile("Assets/Models/CENTURIONv1.fbx");
 	App->importer->ReadFile("Assets/Textures/ghile.png");
 
 	GameObject* tankGameObject = gameObjects.back()->Parent;
