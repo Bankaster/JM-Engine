@@ -3,56 +3,44 @@
 The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.
 
 
+
 ## Logo:
 
 <img align="center" width="300" height="160" src="https://media.discordapp.net/attachments/1046911945695043725/1196885927948193864/JM.png">
 
 
+
 ## Developers GitHub:
 
-### [Joan Damià](<https://github.com/JoanDamia>)
+### [Joan Damià](<https://github.com/JoanDamia>)    ### [Miguel Rodríguez](<https://github.com/Bankaster>)
 
+<div>
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928451526717/Joan.png">
-
-### [Miguel Rodríguez](<https://github.com/Bankaster>)
-
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928812220437/Miguel.png">
+</div>
 
 
 
+## License
 
-Also this Engine is forked from another CITM 3D Engine, you can check the original repesitory here:
+MIT License
 
-### [Original Repository](https://github.com/DaniMariages/DaTo-Engine)
+Copyright (c) 2024 Joan Damià & Miguel Rodríguez
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Basic Features:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-- Fbx loader (Baker_house loaded at the start)
-- Fbx Drag and Drop
-- Texture loader
-- ImGui menus and console Window
-- Unity-like camera
-
-
-## Controls:
-
-- W, A, S and D keys to move the camera
-- Alt + MouseWheel for zoom
-- Alt + Left Click for mouse based view
-- SPACE for activate and deactivate first person view
-- F to center the camera on the 0,0,0 axis
-- F + selected game object to center the camera on the game object
-
-## Main Core Subsystem:
-
-
-## Software Versions
-
-- SDL: 2.0
-- OpenGl: 3.1.0
-- Glew: 2.1.0
-- ImGui: 1.89.9
-- Assimp: 5.3.1
-- DevIL: 7.0
-- MathGeoLib: 2.0
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
