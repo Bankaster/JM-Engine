@@ -12,12 +12,39 @@ The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by tw
 
 ## Developers GitHub:
 
-### [Joan Damià](<https://github.com/JoanDamia>)    ### [Miguel Rodríguez](<https://github.com/Bankaster>)
+<pre>
+      ### [Joan Damià](<https://github.com/JoanDamia>)      [Miguel Rodríguez](<https://github.com/Bankaster>)
+</pre>
 
 <div>
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928451526717/Joan.png">
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928812220437/Miguel.png">
 </div>
+
+
+
+## Main Core Subsystems
+
+In Play Mode you can control a Tank and shoot bullets.
+
+Tank Controls:
+- W --> Move forward
+- A --> Rotate left
+- S --> Move backwards
+- D --> Rotate right
+- Mouse Movement --> Aim Shoot
+- Right Click --> Shoot
+
+The Tank moves and rotates with keyboard controls and the turret rotates with the mouse.
+
+When Play Mode stops the Tank positions resets.
+
+The Bullets are game objects with a life time.
+
+When a bullet is created, a text appears in the Console window.
+
+The script variables of the tank are modifiable in the Inspector window.
+
 
 
 
