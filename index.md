@@ -3,9 +3,13 @@
 The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.
 
 
+
+
 ## Logo:
 
 <img align="center" width="300" height="160" src="https://media.discordapp.net/attachments/1046911945695043725/1196885927948193864/JM.png">
+
+
 
 
 ## Developers GitHub:
@@ -16,6 +20,7 @@ The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by tw
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928451526717/Joan.png">
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928812220437/Miguel.png">
 </div>
+
 
 
 
@@ -43,6 +48,7 @@ The script variables of the tank are modifiable in the Inspector window.
 
 
 
+
 ## How it works
 
 This engine is focused on scripting, that is why its features and systems are focused on this concept.
@@ -65,9 +71,13 @@ Finally, use the PAUSE button to pause the scene, and the STOP button to stop it
 
 
 
+
 ## Engine operation example
 
-<video src="https://media.discordapp.net/attachments/1046911945695043725/1197487204101017620/jm_engine_video.mp4"  width="1000" height="450"></video>
+<video width="800" height="350" controls>
+  <source src="https://media.discordapp.net/attachments/1046911945695043725/1197487204101017620/jm_engine_video.mp4" type="video/mp4">
+</video>
+
 
 
 
