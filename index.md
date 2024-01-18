@@ -1,14 +1,14 @@
 # JM Engine
 
 The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.
-
+<br />
 
 
 
 ## Logo:
 
 <img align="center" width="300" height="160" src="https://media.discordapp.net/attachments/1046911945695043725/1196885927948193864/JM.png">
-
+<br />
 
 
 
@@ -20,7 +20,7 @@ The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by tw
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928451526717/Joan.png">
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928812220437/Miguel.png">
 </div>
-
+<br />
 
 
 
@@ -45,7 +45,7 @@ The Bullets are game objects with a life time.
 When a bullet is created, a text appears in the Console window.
 
 The script variables of the tank are modifiable in the Inspector window.
-
+<br />
 
 
 
@@ -68,7 +68,7 @@ Both the tank movement parameters and the speed and life of the bullets are conf
 Finally, use the PAUSE button to pause the scene, and the STOP button to stop it, when the scene stops, the tank will return to its initial position.
 
 <img align="center" width="800" height="350" src="https://media.discordapp.net/attachments/1046911945695043725/1197477576134901862/JM-Engine_gif_2.gif">
-
+<br />
 
 
 
@@ -77,7 +77,7 @@ Finally, use the PAUSE button to pause the scene, and the STOP button to stop it
 <video width="700" height="300" controls>
   <source src="https://media.discordapp.net/attachments/1046911945695043725/1197487204101017620/jm_engine_video.mp4" type="video/mp4">
 </video>
-
+<br />
 
 
 
@@ -104,3 +104,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+<br />
