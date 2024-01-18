@@ -1,13 +1,11 @@
 # JM Engine
 
 <p>The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.<p/>
-<br><br/>
 
 
 ## Logo:
 
 <img align="center" width="300" height="160" src="https://media.discordapp.net/attachments/1046911945695043725/1196885927948193864/JM.png">
-<br><br/>
 
 
 ## Developers GitHub:
@@ -18,7 +16,6 @@
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928451526717/Joan.png">
 <img align="center" width="300" height="300" src="https://media.discordapp.net/attachments/1046911945695043725/1196885928812220437/Miguel.png">
 </div>
-<br><br/>
 
 
 
@@ -43,7 +40,6 @@ The Bullets are game objects with a life time.
 When a bullet is created, a text appears in the Console window.
 
 The script variables of the tank are modifiable in the Inspector window.
-<br><br/>
 
 
 
@@ -54,10 +50,8 @@ This engine is focused on scripting, that is why its features and systems are fo
 As soon as you open the engine, you will be able to find the different game objects in the scene in the hierarchy menu. In this engine, the CENTURION game object has by default a script to simulate a tank that moves and shoots.
 
 Select the CENTURION game object to see its parameters in the Inspector window. In this window you will see the Information section, in which you will be able to see the script associated with the game object and change its variables.
-<br><br/>
 
-<img align="center" width="800" height="500" src="https://media.discordapp.net/attachments/1046911945695043725/1197477576634007563/JM-Engine_gif_1.gif">
-<br><br/>
+<img align="center" width="800" height="350" src="https://media.discordapp.net/attachments/1046911945695043725/1197477576634007563/JM-Engine_gif_1.gif">
 
 By selecting the Play button, you will be able to control the game object that has a tank script associated with it, in this case, the CENTURION is associated by default.
 
@@ -66,16 +60,16 @@ The tank uses keyboard control to move and rotate while the mouse is used to aim
 Both the tank movement parameters and the speed and life of the bullets are configurable in the Information window in the Tank Script section.
 
 Finally, use the PAUSE button to pause the scene, and the STOP button to stop it, when the scene stops, the tank will return to its initial position.
-<br><br/>
 
-<img align="center" width="800" height="500" src="https://media.discordapp.net/attachments/1046911945695043725/1197477576134901862/JM-Engine_gif_2.gif">
-<br><br/>
+<img align="center" width="800" height="350" src="https://media.discordapp.net/attachments/1046911945695043725/1197477576134901862/JM-Engine_gif_2.gif">
+
 
 
 ## Engine operation example
 
-<video src="https://media.discordapp.net/attachments/1046911945695043725/1197487204101017620/jm_engine_video.mp4"  width="1920" height="1060"></video>
-<br><br/>
+<video src="https://media.discordapp.net/attachments/1046911945695043725/1197487204101017620/jm_engine_video.mp4"  width="1000" height="450"></video>
+
+
 
 ## License
 
