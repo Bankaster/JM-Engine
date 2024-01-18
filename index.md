@@ -1,6 +1,6 @@
 # JM Engine
 
-<p>The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.<p/>
+The JM Engine is a 3D engine focused on scripting tasks in C++ carried out by two CITM students for the third delivery of the Video Game Engines course.
 
 
 ## Logo:
