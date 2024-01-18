@@ -74,7 +74,7 @@ Finally, use the PAUSE button to pause the scene, and the STOP button to stop it
 
 ## Engine operation example
 
-<video width="800" height="350" controls>
+<video width="700" height="300" controls>
   <source src="https://media.discordapp.net/attachments/1046911945695043725/1197487204101017620/jm_engine_video.mp4" type="video/mp4">
 </video>
 
